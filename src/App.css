@@ -301,12 +301,13 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 0.9rem;
-  color: #800080;
+  color: grey;
   cursor: pointer;
 }
-.nav-icon {
-  font-size: 1.3rem;
+.nav-label{
+  color: #000000;
 }
+
 
 @media (min-width: 600px) {
   .meesho-header, .category-shortcuts, .meesho-banner, .offer-strip, .daily-deals, .product-list {

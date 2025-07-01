@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { products } from "./products";
 import Header from "./Header";
-import { Heart, Share2 } from "lucide-react";
+import { Heart, Share2, ShoppingCart, FastForward } from "lucide-react";
 import { useCart } from './CartContext';
 
 const sizes = ["S", "M", "L", "XL", "XXL"];
@@ -106,7 +106,7 @@ function ProductDetail() {
           <li>color- pink</li>
         </ul>
       </div>
-      <div style={{ display: "flex", gap: 12, margin: "24px 0 0 0", justifyContent: "center",position:'fixed',bottom:0, left:'7%', background:'white', padding:6 }}>
+      <div style={{ display: "flex", gap: 8, margin: "24px 0 0 0", justifyContent: "center",position:'fixed',bottom:0, background:'white', padding:'6px 0', width:'100%' }}>
         <button
           style={{
             background: "#fff",
@@ -116,7 +116,10 @@ function ProductDetail() {
             padding: "12px 32px",
             fontWeight: 600,
             fontSize: 16,
-            cursor: "pointer"
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            gap: 8
           }}
           onClick={() => addToCart({
             id: productId,
@@ -126,7 +129,7 @@ function ProductDetail() {
             size: selectedSize,
             quantity: 1
           })}
-        >Add to Cart</button>
+        > <ShoppingCart /> Add to Cart</button>
         <button style={{
           background: "#a020f0",
           color: "#fff",
@@ -135,7 +138,10 @@ function ProductDetail() {
           padding: "12px 32px",
           fontWeight: 600,
           fontSize: 16,
-          cursor: "pointer"
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: 8
         }}
         onClick={() => {
           addToCart({
@@ -149,7 +155,7 @@ function ProductDetail() {
           navigate('/checkout');
           closeCart()
         }}
-        >Buy Now</button>
+        ><FastForward /> Buy Now</button>
       </div>
     </div>
   );

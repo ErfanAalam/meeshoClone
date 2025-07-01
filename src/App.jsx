@@ -12,7 +12,7 @@ import ProductListPage from './components/ProductListPage';
 import ProductDetail from './components/ProductDetail';
 import { CartProvider } from './components/CartContext';
 import CartDrawer from './components/CartDrawer';
-import CheckoutPage from './pages/CheckoutPage';
+import CheckoutPage, { AddressPage } from './pages/CheckoutPage';
 
 function App() {
   return (
@@ -42,6 +42,7 @@ function App() {
           <Route path="/products/:productId" element={<ProductDetail />} />
           <Route path="/products/category/:category" element={<ProductListPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/address" element={<AddressPage />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

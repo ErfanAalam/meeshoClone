@@ -1,9 +1,10 @@
+import { Home, Shirt, Package,BookAlert,Laugh } from "lucide-react";
 const navItems = [
-  { label: 'Home', icon: '🏠' }, 
-  { label: 'Categories', icon: '📂' },
-  { label: 'My Orders', icon: '📦' },                                                                                                                                   
-  { label: 'Help', icon: '📦' },                                                     
-  { label: 'Account', icon: '👤' },
+  { label: 'Home', icon: <Home color="#9F2089"/> }, 
+  { label: 'Categories', icon: <Shirt /> },
+  { label: 'My Orders', icon: <Package /> },                                                                                                                                   
+  { label: 'Help', icon: <BookAlert /> },                                                     
+  { label: 'Account', icon: <Laugh /> },
 ];
 
 function BottomNav() {
@@ -11,7 +12,8 @@ function BottomNav() {
     <nav className="bottom-nav">
       {navItems.map((item, idx) => (
         <div className="nav-item" key={idx}>
-          <span className="nav-icon">{item.icon}</span>
+          {/* <span className="nav-icon">{item.icon}</span> */}
+          {item.icon}
           <span className="nav-label">{item.label}</span>
         </div>
       ))}
